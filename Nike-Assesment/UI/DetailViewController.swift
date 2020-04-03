@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import SafariServices
 
 final class DetailViewController: UIViewController {
     var result: AlbumResults?
     
     init(result: AlbumResults?) {
         super.init(nibName: nil, bundle: nil)
-        
         self.result = result
     }
     
@@ -23,40 +23,125 @@ final class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.systemBackground
+        title = getAlbumDetailsTitle()
         
         guard let result = result else { return }
+        configureDetailView(from: result)
+    }
+    
+    func getAlbumDetailsTitle() -> String {
+        return "Album Details"
+    }
+    
+    func configureDetailView(from result: AlbumResults) {
+        let mainScrollView = configureScrollView()
+        let mainStackView = configureMainStackView(scrollView: mainScrollView)
+        let buttonStackView = createGoToAlbumButtonStackView()
+        view.addSubview(buttonStackView)
         
-        view.backgroundColor = UIColor.white
-        edgesForExtendedLayout = []
-        
-        let mainStackView = UIStackView.configureStackView()
-        view.addSubview(mainStackView)
-        mainStackView.addConstaintsToSuperview(leadingOffset: 15, trailingOffset: 15, topOffset: 15, bottomOffset: 15)
-        
-        mainStackView.addArrangedSubview(UIImageView.updateAlbumImage(url: result.artworkUrl100, height: 400))
+        NSLayoutConstraint.activate([
+            buttonStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            buttonStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            buttonStackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: self.view.safeAreaInsets.bottom)
+        ])
         
         let genreStackView = createLabelStackView(from: Constants.genre,
                                                   subTitle: result.genres.first?.name ?? "--")
+        let albumImageView = UIImageView.updateAlbumImage(url: result.artworkUrl100, height: 400)
+        let copyRightLabel = UILabel.createLabel(from: result.copyright, numberOfLines: 0)
+        
         
         mainStackView.addArrangedSubViews([
+            albumImageView,
             createLabelStackView(from: Constants.album, subTitle: result.name),
             createLabelStackView(from: Constants.artist, subTitle: result.artistName),
             genreStackView,
+            copyRightLabel
         ])
         
         mainStackView.setCustomSpacing(30, after: genreStackView)
-        mainStackView.addArrangedSubview(UILabel.createLabel(from: result.copyright, numberOfLines: 0))
-        
-        mainStackView.addArrangedSubview(UIView())
+    }
+    
+    func configureScrollView() -> UIScrollView {
+        let scrollView = UIScrollView()
+        view.addSubview(scrollView)
+        scrollView.addConstaintsToSuperview()
+        scrollView.widthAnchor.constraint(equalToConstant: self.view.frame.size.width).isActive = true
+        return scrollView
+    }
+    
+    func configureMainStackView(scrollView: UIScrollView) -> UIStackView {
+        let mainStackView = UIStackView.configureStackView()
+        scrollView.addSubview(mainStackView)
+        mainStackView.addConstaintsToSuperview(leadingOffset: 15, trailingOffset: 15, topOffset: 15, bottomOffset: 20)
+        mainStackView.widthAnchor.constraint(equalToConstant: self.view.frame.size.width-30).isActive = true
+        return mainStackView
     }
     
     func createLabelStackView(from title: String, subTitle: String) -> UIStackView {
         let stackView = UIStackView.configureStackView(spacing: 0, axis: .horizontal)
-        stackView.addArrangedSubview(UILabel.createLabel(from: title, enableBoldFont: true))
-        stackView.addArrangedSubview(UILabel.createLabel(from: subTitle))
+        stackView.addArrangedSubViews([
+            UILabel.createLabel(from: title, enableBoldFont: true),
+            UILabel.createLabel(from: subTitle),
+            UIView()
+        ])
+        
         return stackView
     }
+    
+    func createGoToAlbumButtonStackView() -> UIStackView {
+        let stackView = UIStackView.configureStackView(spacing: 0)
+        
+        let buttonView = UIView()
+        buttonView.backgroundColor = .systemGroupedBackground
+        let goToAlbumButton = createGoToAlbumButton()
+        buttonView.addSubview(goToAlbumButton)
+        
+        goToAlbumButton.addConstaintsToSuperview(leadingOffset: 20,
+                                                 trailingOffset: 20,
+                                                 topOffset: 20,
+                                                 bottomOffset: 20)
+        
+        stackView.addArrangedSubViews([
+            createSinglePixel(),
+            buttonView
+        ])
+        
+        stackView.widthAnchor.constraint(equalToConstant: self.view.frame.size.width).isActive = true
+        
+        return stackView
+    }
+    
+    func createSinglePixel() -> UIView {
+        let singlePixelView = UIView()
+        singlePixelView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        singlePixelView.backgroundColor = .systemGray
+        return singlePixelView
+    }
+    
+    func createGoToAlbumButton() -> UIButton {
+        let button = UIButton()
+        button.backgroundColor = .systemBlue
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.addTarget(self, action: #selector(goToAlbumMusic), for: .touchUpInside)
+        button.setTitle("Go to Albums page", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        return button
+    }
+    
+    @objc func goToAlbumMusic() {
+        guard
+            let urlString = self.result?.url,
+            let url = URL(string: urlString) else { return }
+        
+        let safariVC = SFSafariViewController(url: url)
+        present(safariVC, animated: true, completion: nil)
+    }
 }
+
+// 
 
 private extension DetailViewController {
     enum Constants {

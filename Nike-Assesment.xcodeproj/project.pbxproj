@@ -37,6 +37,7 @@
 		8DDCA0432436FCCD000B9ED0 /* UILabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0422436FCCD000B9ED0 /* UILabelTest.swift */; };
 		8DDCA0462436FE63000B9ED0 /* ErrorTypeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0452436FE63000B9ED0 /* ErrorTypeTest.swift */; };
 		8DDCA048243700C4000B9ED0 /* HTTPResponseCodesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA047243700C4000B9ED0 /* HTTPResponseCodesTest.swift */; };
+		8DDCA055243785B2000B9ED0 /* AlbumDetailsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA054243785B2000B9ED0 /* AlbumDetailsViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		8DDCA0422436FCCD000B9ED0 /* UILabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelTest.swift; sourceTree = "<group>"; };
 		8DDCA0452436FE63000B9ED0 /* ErrorTypeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTypeTest.swift; sourceTree = "<group>"; };
 		8DDCA047243700C4000B9ED0 /* HTTPResponseCodesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseCodesTest.swift; sourceTree = "<group>"; };
+		8DDCA054243785B2000B9ED0 /* AlbumDetailsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 		8DDCA04F243709B5000B9ED0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8DDCA05324378589000B9ED0 /* AlbumDetails */,
 				8DDCA050243709BC000B9ED0 /* TopAlbum */,
 			);
 			path = UI;
@@ -304,6 +307,14 @@
 				8DDCA0362436E9B2000B9ED0 /* ViewControllerTests.swift */,
 			);
 			path = TopAlbum;
+			sourceTree = "<group>";
+		};
+		8DDCA05324378589000B9ED0 /* AlbumDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8DDCA054243785B2000B9ED0 /* AlbumDetailsViewControllerTest.swift */,
+			);
+			path = AlbumDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +479,7 @@
 				8DDCA03C2436F9A3000B9ED0 /* AlbumResultBuilder.swift in Sources */,
 				8DDCA0432436FCCD000B9ED0 /* UILabelTest.swift in Sources */,
 				8DDCA048243700C4000B9ED0 /* HTTPResponseCodesTest.swift in Sources */,
+				8DDCA055243785B2000B9ED0 /* AlbumDetailsViewControllerTest.swift in Sources */,
 				8DDCA0412436FA51000B9ED0 /* UIStackViewTest.swift in Sources */,
 				8DD4C16D242E8F8300B7874E /* Nike_AssesmentTests.swift in Sources */,
 			);

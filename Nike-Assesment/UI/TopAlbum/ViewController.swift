@@ -47,15 +47,11 @@ final class ViewController: UIViewController {
         
         return nil
     }
-    
-    func pushToDetailViewController(from indexPath: Int) {
-        guard let detailVC = getDetailVC(from: indexPath) else { return }
-        self.navigationController?.pushViewController(detailVC, animated: true)
-    }
 }
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        pushToDetailViewController(from: indexPath.row)
+        guard let detailVC = getDetailVC(from: indexPath.row) else { return }
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
