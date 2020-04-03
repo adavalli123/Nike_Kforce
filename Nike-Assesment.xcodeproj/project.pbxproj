@@ -60,11 +60,11 @@
 		8D48A772242EF8DB00DADD43 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		8D6EB09124343F6000B968FB /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		8D6EB09324343F6600B968FB /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
-		8D6EB09524344A2E00B968FB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8D6EB09524344A2E00B968FB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		8D6EB097243585DE00B968FB /* HTTPResponseCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseCodes.swift; sourceTree = "<group>"; };
 		8D6EB099243590F800B968FB /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		8D6EB09B24363E7800B968FB /* ViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModal.swift; sourceTree = "<group>"; };
-		8D6EB09D2436941400B968FB /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		8D6EB09D2436941400B968FB /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableView.swift; path = ../TableView.swift; sourceTree = "<group>"; };
 		8DD4C152242E8F8200B7874E /* Nike-Assesment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike-Assesment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD4C155242E8F8200B7874E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DD4C157242E8F8200B7874E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		8DD4C186242E969100B7874E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8DD4C189242EA1CD00B7874E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8DD4C191242EBCBA00B7874E /* TopAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbums.swift; sourceTree = "<group>"; };
-		8DD4C193242EC15F00B7874E /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		8DD4C193242EC15F00B7874E /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlbumTableViewCell.swift; path = ../AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		8DDCA0302436E4FF000B9ED0 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		8DDCA0322436E50C000B9ED0 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		8DDCA0342436E6D9000B9ED0 /* ViewModalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModalTest.swift; sourceTree = "<group>"; };
@@ -143,16 +143,16 @@
 		8DD4C154242E8F8200B7874E /* Nike-Assesment */ = {
 			isa = PBXGroup;
 			children = (
-				8DD4C18C242EAEC600B7874E /* UILayer */,
-				8DD4C18B242EAE1300B7874E /* Networking */,
+				8DDCA04D24370985000B9ED0 /* Modal */,
+				8DDCA04B2437092C000B9ED0 /* ViewModal */,
+				8DD4C18C242EAEC600B7874E /* UI */,
 				8DD4C185242E966600B7874E /* Extensions */,
+				8DD4C18B242EAE1300B7874E /* Networking */,
 				8DD4C155242E8F8200B7874E /* AppDelegate.swift */,
 				8DD4C157242E8F8200B7874E /* SceneDelegate.swift */,
 				8DD4C15E242E8F8200B7874E /* Assets.xcassets */,
 				8DD4C160242E8F8200B7874E /* LaunchScreen.storyboard */,
 				8DD4C163242E8F8200B7874E /* Info.plist */,
-				8DD4C191242EBCBA00B7874E /* TopAlbums.swift */,
-				8D6EB09B24363E7800B968FB /* ViewModal.swift */,
 			);
 			path = "Nike-Assesment";
 			sourceTree = "<group>";
@@ -160,13 +160,13 @@
 		8DD4C16B242E8F8300B7874E /* Nike-AssesmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				8DDCA04F243709B5000B9ED0 /* UI */,
+				8DDCA04E243709A0000B9ED0 /* ViewModals */,
 				8DDCA0442436FE47000B9ED0 /* Networking */,
 				8DDCA03F2436FA3B000B9ED0 /* Extension */,
 				8DDCA03A2436F990000B9ED0 /* Mock */,
 				8DD4C16C242E8F8300B7874E /* Nike_AssesmentTests.swift */,
 				8DD4C16E242E8F8300B7874E /* Info.plist */,
-				8DDCA0342436E6D9000B9ED0 /* ViewModalTest.swift */,
-				8DDCA0362436E9B2000B9ED0 /* ViewControllerTests.swift */,
 			);
 			path = "Nike-AssesmentTests";
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		8DD4C188242EA0B600B7874E /* Services */ = {
+		8DD4C18B242EAE1300B7874E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				8D6EB09324343F6600B968FB /* ErrorType.swift */,
@@ -201,26 +201,16 @@
 				8D6EB097243585DE00B968FB /* HTTPResponseCodes.swift */,
 				8D6EB099243590F800B968FB /* Response.swift */,
 			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		8DD4C18B242EAE1300B7874E /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				8DD4C188242EA0B600B7874E /* Services */,
-			);
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		8DD4C18C242EAEC600B7874E /* UILayer */ = {
+		8DD4C18C242EAEC600B7874E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				8DD4C159242E8F8200B7874E /* ViewController.swift */,
-				8DD4C193242EC15F00B7874E /* AlbumTableViewCell.swift */,
-				8D6EB09524344A2E00B968FB /* DetailViewController.swift */,
-				8D6EB09D2436941400B968FB /* TableView.swift */,
+				8DDCA04A2437090B000B9ED0 /* AlbumDetails */,
+				8DDCA049243708EE000B9ED0 /* TopAlbum */,
 			);
-			path = UILayer;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		8DDCA03A2436F990000B9ED0 /* Mock */ = {
@@ -248,6 +238,72 @@
 				8DDCA047243700C4000B9ED0 /* HTTPResponseCodesTest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		8DDCA049243708EE000B9ED0 /* TopAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4C159242E8F8200B7874E /* ViewController.swift */,
+				8DD4C193242EC15F00B7874E /* AlbumTableViewCell.swift */,
+				8D6EB09D2436941400B968FB /* TableView.swift */,
+			);
+			path = TopAlbum;
+			sourceTree = "<group>";
+		};
+		8DDCA04A2437090B000B9ED0 /* AlbumDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8D6EB09524344A2E00B968FB /* DetailViewController.swift */,
+			);
+			path = AlbumDetails;
+			sourceTree = "<group>";
+		};
+		8DDCA04B2437092C000B9ED0 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				8DDCA04C24370957000B9ED0 /* TopAlbum */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		8DDCA04C24370957000B9ED0 /* TopAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				8D6EB09B24363E7800B968FB /* ViewModal.swift */,
+			);
+			path = TopAlbum;
+			sourceTree = "<group>";
+		};
+		8DDCA04D24370985000B9ED0 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4C191242EBCBA00B7874E /* TopAlbums.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		8DDCA04E243709A0000B9ED0 /* ViewModals */ = {
+			isa = PBXGroup;
+			children = (
+				8DDCA0342436E6D9000B9ED0 /* ViewModalTest.swift */,
+			);
+			path = ViewModals;
+			sourceTree = "<group>";
+		};
+		8DDCA04F243709B5000B9ED0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8DDCA050243709BC000B9ED0 /* TopAlbum */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8DDCA050243709BC000B9ED0 /* TopAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				8DDCA0362436E9B2000B9ED0 /* ViewControllerTests.swift */,
+			);
+			path = TopAlbum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
