@@ -45,6 +45,7 @@
 		8DDCA0612437C3C7000B9ED0 /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0602437C3C7000B9ED0 /* TableViewTests.swift */; };
 		8DDCA0632437C527000B9ED0 /* MockUpdateAlbumDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0622437C527000B9ED0 /* MockUpdateAlbumDelegate.swift */; };
 		8DDCA0652437C73F000B9ED0 /* MockTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0642437C73F000B9ED0 /* MockTableViewDatasource.swift */; };
+		8DDCA0672437CF61000B9ED0 /* coverage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCA0662437CF61000B9ED0 /* coverage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		8DDCA0602437C3C7000B9ED0 /* TableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTests.swift; sourceTree = "<group>"; };
 		8DDCA0622437C527000B9ED0 /* MockUpdateAlbumDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpdateAlbumDelegate.swift; sourceTree = "<group>"; };
 		8DDCA0642437C73F000B9ED0 /* MockTableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDatasource.swift; sourceTree = "<group>"; };
+		8DDCA0662437CF61000B9ED0 /* coverage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +342,7 @@
 			children = (
 				8DDCA05A2437A2A5000B9ED0 /* albumList.png */,
 				8DDCA05B2437A2A5000B9ED0 /* detailAlbum.png */,
+				8DDCA0662437CF61000B9ED0 /* coverage.png */,
 				8DDCA0582437A2A5000B9ED0 /* loading state.png */,
 				8DDCA0592437A2A5000B9ED0 /* webPage.png */,
 			);
@@ -459,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DDCA0672437CF61000B9ED0 /* coverage.png in Resources */,
 				8DDCA05C2437A2A5000B9ED0 /* loading state.png in Resources */,
 				8DDCA05E2437A2A5000B9ED0 /* albumList.png in Resources */,
 				8DDCA05F2437A2A5000B9ED0 /* detailAlbum.png in Resources */,
