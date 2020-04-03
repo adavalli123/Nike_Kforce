@@ -38,6 +38,10 @@
 		8DDCA0462436FE63000B9ED0 /* ErrorTypeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0452436FE63000B9ED0 /* ErrorTypeTest.swift */; };
 		8DDCA048243700C4000B9ED0 /* HTTPResponseCodesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA047243700C4000B9ED0 /* HTTPResponseCodesTest.swift */; };
 		8DDCA055243785B2000B9ED0 /* AlbumDetailsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA054243785B2000B9ED0 /* AlbumDetailsViewControllerTest.swift */; };
+		8DDCA05C2437A2A5000B9ED0 /* loading state.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCA0582437A2A5000B9ED0 /* loading state.png */; };
+		8DDCA05D2437A2A5000B9ED0 /* webPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCA0592437A2A5000B9ED0 /* webPage.png */; };
+		8DDCA05E2437A2A5000B9ED0 /* albumList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCA05A2437A2A5000B9ED0 /* albumList.png */; };
+		8DDCA05F2437A2A5000B9ED0 /* detailAlbum.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCA05B2437A2A5000B9ED0 /* detailAlbum.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,10 @@
 		8DDCA0452436FE63000B9ED0 /* ErrorTypeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTypeTest.swift; sourceTree = "<group>"; };
 		8DDCA047243700C4000B9ED0 /* HTTPResponseCodesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseCodesTest.swift; sourceTree = "<group>"; };
 		8DDCA054243785B2000B9ED0 /* AlbumDetailsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewControllerTest.swift; sourceTree = "<group>"; };
+		8DDCA0582437A2A5000B9ED0 /* loading state.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading state.png"; sourceTree = "<group>"; };
+		8DDCA0592437A2A5000B9ED0 /* webPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = webPage.png; sourceTree = "<group>"; };
+		8DDCA05A2437A2A5000B9ED0 /* albumList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = albumList.png; sourceTree = "<group>"; };
+		8DDCA05B2437A2A5000B9ED0 /* detailAlbum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailAlbum.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,7 @@
 		8DD4C149242E8F8200B7874E = {
 			isa = PBXGroup;
 			children = (
+				8DDCA0572437A25C000B9ED0 /* Images */,
 				8DD4C154242E8F8200B7874E /* Nike-Assesment */,
 				8DD4C16B242E8F8300B7874E /* Nike-AssesmentTests */,
 				8DD4C176242E8F8300B7874E /* Nike-AssesmentUITests */,
@@ -317,6 +326,17 @@
 			path = AlbumDetails;
 			sourceTree = "<group>";
 		};
+		8DDCA0572437A25C000B9ED0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8DDCA05A2437A2A5000B9ED0 /* albumList.png */,
+				8DDCA05B2437A2A5000B9ED0 /* detailAlbum.png */,
+				8DDCA0582437A2A5000B9ED0 /* loading state.png */,
+				8DDCA0592437A2A5000B9ED0 /* webPage.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +450,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DDCA05C2437A2A5000B9ED0 /* loading state.png in Resources */,
+				8DDCA05E2437A2A5000B9ED0 /* albumList.png in Resources */,
+				8DDCA05F2437A2A5000B9ED0 /* detailAlbum.png in Resources */,
+				8DDCA05D2437A2A5000B9ED0 /* webPage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
