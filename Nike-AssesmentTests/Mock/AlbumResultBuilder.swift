@@ -25,6 +25,5 @@ struct AlbumResultBuilder {
                          genres: [Genres(name: "Spirtual")],
                          copyright: "CopyRight Access 2")
         ]
-
     }
 }

@@ -60,6 +60,7 @@ final class DetailViewController: UIViewController {
             copyRightLabel
         ])
         
+        mainStackView.setCustomSpacing(30, after: albumImageView)
         mainStackView.setCustomSpacing(30, after: genreStackView)
     }
     
@@ -125,7 +126,7 @@ final class DetailViewController: UIViewController {
         button.backgroundColor = .systemBlue
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.addTarget(self, action: #selector(goToAlbumMusic), for: .touchUpInside)
-        button.setTitle("Go to Albums page", for: .normal)
+        button.setTitle(Constants.goToAlbumButtonTitle, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.heightAnchor.constraint(equalToConstant: 44).isActive = true
         return button
@@ -141,13 +142,12 @@ final class DetailViewController: UIViewController {
     }
 }
 
-// 
-
 private extension DetailViewController {
     enum Constants {
         static let album = "Album: "
         static let artist = "Artist: "
         static let genre = "Genres: "
+        static let goToAlbumButtonTitle = "Go to Albums page"
     }
 }
 

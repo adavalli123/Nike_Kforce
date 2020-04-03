@@ -67,4 +67,23 @@ class AlbumDetailsViewControllerTest: XCTestCase {
         
         XCTAssertGreaterThan(stackViewCount, 0)
     }
+    
+    func testGoToAlbumUI() {
+        let testResult = AlbumResultBuilder.build().first
+        let detailVC = DetailViewController(result: testResult)
+        let stackViewCount = detailVC.createGoToAlbumButtonStackView().arrangedSubviews.count
+        
+        XCTAssertGreaterThan(stackViewCount, 0)
+    }
+    
+    func testGoToAlbumButton() {
+        let testResult = AlbumResultBuilder.build().first
+        let detailVC = DetailViewController(result: testResult)
+        let button = detailVC.createGoToAlbumButton()
+        
+        XCTAssertEqual(button.titleLabel?.text,  "Go to Albums page")
+        XCTAssertEqual(button.titleLabel?.font, UIFont.boldSystemFont(ofSize: 14))
+        XCTAssertEqual(button.titleLabel?.textColor, UIColor.white)
+    }
 }
+

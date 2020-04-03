@@ -13,6 +13,7 @@ protocol UpdateAlbumDelegate {
 }
 
 class TableView: UITableView {
+    let activityIndicator = UIActivityIndicatorView()
     var results: [AlbumResults] = [] {
         didSet {
             self.reloadData()
@@ -59,7 +60,7 @@ extension TableView: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let result = results[indexPath.row]
+        guard let result = results[exist: indexPath.row] else { return cell }
         cell.configure(url: result.artworkUrl100, artist: result.artistName, album: result.name)
         return cell
     }

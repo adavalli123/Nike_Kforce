@@ -42,6 +42,9 @@
 		8DDCA05D2437A2A5000B9ED0 /* webPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCA0592437A2A5000B9ED0 /* webPage.png */; };
 		8DDCA05E2437A2A5000B9ED0 /* albumList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCA05A2437A2A5000B9ED0 /* albumList.png */; };
 		8DDCA05F2437A2A5000B9ED0 /* detailAlbum.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCA05B2437A2A5000B9ED0 /* detailAlbum.png */; };
+		8DDCA0612437C3C7000B9ED0 /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0602437C3C7000B9ED0 /* TableViewTests.swift */; };
+		8DDCA0632437C527000B9ED0 /* MockUpdateAlbumDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0622437C527000B9ED0 /* MockUpdateAlbumDelegate.swift */; };
+		8DDCA0652437C73F000B9ED0 /* MockTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0642437C73F000B9ED0 /* MockTableViewDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		8DDCA0592437A2A5000B9ED0 /* webPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = webPage.png; sourceTree = "<group>"; };
 		8DDCA05A2437A2A5000B9ED0 /* albumList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = albumList.png; sourceTree = "<group>"; };
 		8DDCA05B2437A2A5000B9ED0 /* detailAlbum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailAlbum.png; sourceTree = "<group>"; };
+		8DDCA0602437C3C7000B9ED0 /* TableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTests.swift; sourceTree = "<group>"; };
+		8DDCA0622437C527000B9ED0 /* MockUpdateAlbumDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpdateAlbumDelegate.swift; sourceTree = "<group>"; };
+		8DDCA0642437C73F000B9ED0 /* MockTableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +235,8 @@
 			children = (
 				8DDCA03B2436F9A3000B9ED0 /* AlbumResultBuilder.swift */,
 				8DDCA03D2436F9DA000B9ED0 /* MockTableViewDelegate.swift */,
+				8DDCA0622437C527000B9ED0 /* MockUpdateAlbumDelegate.swift */,
+				8DDCA0642437C73F000B9ED0 /* MockTableViewDatasource.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -314,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				8DDCA0362436E9B2000B9ED0 /* ViewControllerTests.swift */,
+				8DDCA0602437C3C7000B9ED0 /* TableViewTests.swift */,
 			);
 			path = TopAlbum;
 			sourceTree = "<group>";
@@ -497,11 +506,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DDCA0372436E9B2000B9ED0 /* ViewControllerTests.swift in Sources */,
+				8DDCA0652437C73F000B9ED0 /* MockTableViewDatasource.swift in Sources */,
+				8DDCA0632437C527000B9ED0 /* MockUpdateAlbumDelegate.swift in Sources */,
 				8DDCA0352436E6D9000B9ED0 /* ViewModalTest.swift in Sources */,
 				8DDCA0462436FE63000B9ED0 /* ErrorTypeTest.swift in Sources */,
 				8DDCA03E2436F9DA000B9ED0 /* MockTableViewDelegate.swift in Sources */,
 				8DDCA03C2436F9A3000B9ED0 /* AlbumResultBuilder.swift in Sources */,
 				8DDCA0432436FCCD000B9ED0 /* UILabelTest.swift in Sources */,
+				8DDCA0612437C3C7000B9ED0 /* TableViewTests.swift in Sources */,
 				8DDCA048243700C4000B9ED0 /* HTTPResponseCodesTest.swift in Sources */,
 				8DDCA055243785B2000B9ED0 /* AlbumDetailsViewControllerTest.swift in Sources */,
 				8DDCA0412436FA51000B9ED0 /* UIStackViewTest.swift in Sources */,
