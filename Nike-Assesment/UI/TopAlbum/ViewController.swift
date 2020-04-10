@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 final class ViewController: UIViewController {
-    var viewModal: ViewModal = ViewModal()
+    private (set) var viewModal: ViewModal = ViewModal()
     let tableView = TableView()
     
     override func loadView() {

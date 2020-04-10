@@ -9,9 +9,9 @@
 import UIKit
 
 final class AlbumTableViewCell: UITableViewCell {
-    var albumImageView = UIImageView()
-    var artistLabel = UILabel()
-    var albumLabel = UILabel()
+    private (set) var albumImageView = UIImageView()
+    private (set) var artistLabel = UILabel()
+    private (set) var albumLabel = UILabel()
     
     func configure(url: String, artist: String, album: String) {
         self.selectionStyle = .none
